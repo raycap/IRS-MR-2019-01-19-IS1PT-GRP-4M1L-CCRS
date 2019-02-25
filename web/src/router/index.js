@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import QuestionsPage from '../components/QuestionsPage'
+import QuestionsPage from '../components/pages/QuestionsPage'
+import GetStarted from '../components/pages/GetStarted'
 
 Vue.use(Router)
 
@@ -9,14 +10,14 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'questionsPage',
-      component: QuestionsPage
+      name: 'getStartedPage',
+      component: GetStarted
     },
     {
       path: '/question',
       name: 'questionsPage',
       component: QuestionsPage
     },
-    {path: '*', redirect: { name: 'questionsPage' }}
+    {path: '*', redirect: { name: 'getStartedPage' }}
   ]
 })

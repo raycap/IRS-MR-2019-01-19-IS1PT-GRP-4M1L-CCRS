@@ -28,16 +28,20 @@
         </div>
       </div>
     </div>
+    <router-link :to="{ name: 'questionsPage', query: {page: nextPage} }" v-if="!isLastPage">Next</router-link>
+    <router-link :to="{ name: 'getStartedPage', query: {} }" v-else>Submit</router-link>
   </div>
 </template>
 
 <script>
-import questionares from '../fixtures/questionares'
+import questionares from '../../fixtures/questionares'
 
 export default {
   data () {
     return {
       pageNumber: 0,
+      nextPage: 0,
+      isLastPage: false,
       questionsConfigs: {}
     }
   },
@@ -49,10 +53,12 @@ export default {
     }
   },
   mounted () {
-    this.pageNumber = this.$route.query['page']
+    this.pageNumber = parseInt(this.$route.query['page'])
+    this.nextPage = this.pageNumber + 1
     this.questionsConfigs = questionares['questions']['page_' + this.pageNumber]
-    console.log(this.pageNumber)
-    console.log(this.questionsConfigs)
+    if (questionares['questions']['page_' + (this.pageNumber + 1)] === undefined) {
+      this.isLastPage = true
+    }
   }
 }
 </script>
