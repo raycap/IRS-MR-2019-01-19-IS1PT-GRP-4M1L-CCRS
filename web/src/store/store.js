@@ -13,7 +13,8 @@ export default new Vuex.Store({
   },
   mutations: {
     setData (state, payload) {
-      state.questionareData = payload.questionareData
+      // payload: { questionareData : JSON, page: integer }
+      state.questionareData[payload.page] = payload.questionareData
     }
   },
   actions: {

@@ -1,7 +1,8 @@
 <template>
-  <div class="getting-started-page">
-    <div>Getting Started. Welcome !!</div>
-    <router-link :to="{ name: pageName.questionsPage, params: {page: 1} }">Start</router-link>
+  <div class="recommend-page">
+    <div>You're result is:</div>
+    <div>{{ questionareData['2'] }}</div>
+    <router-link :to="{ name: pageName.getStarted }">Go back to Homepage</router-link>
   </div>
 </template>
 
@@ -11,11 +12,15 @@ import {pageName} from '../../commons/constants/constants'
 export default {
   data () {
     return {
-      pageName: pageName
+      pageName: pageName,
+      questionareData: {}
     }
   },
   methods: {},
-  mounted () {}
+  mounted () {
+    this.questionareData = this.$store.getters.getData
+    console.log(this.questionareData)
+  }
 }
 </script>
 
