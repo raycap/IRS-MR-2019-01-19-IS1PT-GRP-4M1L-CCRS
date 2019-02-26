@@ -1,8 +1,10 @@
 <template>
   <div class="recommend-page">
     <div>You're result is:</div>
-    <div>{{ questionareData['2'] }}</div>
-    <router-link :to="{ name: pageName.getStarted }">Go back to Homepage</router-link>
+    <div>{{ questionareData }}</div>
+    <router-link class="btn btn-secondary btn-lg active btn-change-page" :to="{ name: pageName.getStarted }">
+        Go back to Homepage
+    </router-link>
   </div>
 </template>
 
@@ -19,6 +21,7 @@ export default {
   methods: {},
   mounted () {
     this.questionareData = this.$store.getters.getData
+    console.log('recommend page')
     console.log(this.questionareData)
   }
 }

@@ -2,24 +2,25 @@
   <div class="questions-page">
     <div v-for="(question,i) in questionsConfigs['questions']" :key="i" class="questions-box">
       <div class="questions-question">{{ i+1 }}. {{ question[`question`] }}</div>
-      <div class="questions-answer">
-        <input v-if="question['answerType'] === 'string'" type="text"
-               v-model="question['answer']"/>
+      <div class="questions-answer form-group">
+        <input v-if="question['answerType'] === 'string'" type="text" class="form-control"
+               v-model="question['answer']" placeholder="Answer here..."/>
 
-        <input v-else-if="question['answerType'] === 'integer'" type="number"
-               v-model="question['answer']"/>
+        <input v-else-if="question['answerType'] === 'integer'" type="number" class="form-control"
+               v-model="question['answer']" placeholder="Answer here..."/>
 
-        <input v-else-if="question['answerType'] === 'float'" type="number"
-               v-model="question['answer']"/>
+        <input v-else-if="question['answerType'] === 'float'" type="number" class="form-control"
+               v-model="question['answer']" placeholder="Answer here..."/>
 
-        <div v-else-if="question['answerType'] === 'checkbox'">
+        <div v-else-if="question['answerType'] === 'checkbox'" class="form-check">
           <div v-for="(choice,j) in question['choices']" :key="j">
-            <input type="checkbox" :id="choice['id']" :value="choice['value']" v-model="question['answer']"/>
-            <label :for="choice['id']"> {{ choice['label'] }} </label>
+            <input type="checkbox" :id="choice['id']" :value="choice['value']" class="form-check-input"
+                   v-model="question['answer']"/>
+            <label :for="choice['id']" class="form-check-label"> {{ choice['label'] }} </label>
           </div>
         </div>
 
-        <div v-else-if="question['answerType'] === 'radio'">
+        <div v-else-if="question['answerType'] === 'radio'" class="form-check">
           <div v-for="(choice,k) in question['choices']" :key="k">
             <input type="radio" :id="choice['id']" :value="choice['value']" v-model="question['answer']"/>
             <label :for="choice['id']"> {{ choice['label'] }} </label>
@@ -28,8 +29,8 @@
       </div>
     </div>
 
-    <router-link :to="{ name: pageName.questionsPage, params: {page: nextPage} }" v-if="!isLastPage" @click.native="submit">Next</router-link>
-    <router-link :to="{ name: pageName.recommendPage }" v-else @click.native="submit">Submit</router-link>
+    <button class="btn btn-secondary btn-lg active btn-submit" v-if="!isLastPage" @click="toNextPage">Next</button>
+    <button class="btn btn-primary btn-lg active btn-submit" v-else @click="submit">Submit</button>
   </div>
 </template>
 
@@ -48,10 +49,13 @@ export default {
     }
   },
   methods: {
+    toNextPage () {
+      this.$store.commit('setData', { questionareData: this.questionsConfigs, page: this.pageNumber })
+      this.$router.push({ name: this.pageName.questionsPage, params: { page: this.nextPage } })
+    },
     submit () {
       this.$store.commit('setData', { questionareData: this.questionsConfigs, page: this.pageNumber })
-      console.log('Submit on page : ' + this.pageNumber)
-      console.log(this.$store.getters.getData)
+      this.$router.push({ name: this.pageName.recommendPage })
     }
   },
   mounted () {
@@ -67,6 +71,29 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.questions-page {
+  display: flex;
+  flex-direction: column;
+}
+.questions-box {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  margin: auto;
+  text-align: left;
+  margin-bottom: 32px;
+  border: solid 1px darkgrey;
+  padding: 16px;
+  box-shadow: 4px 4px 18px #88889B;
+  background-color: white;
+}
+.questions-question{
+  margin-bottom: 8px;
+}
+.questions-page .btn-submit {
+  max-width: 120px;
+  margin-left: 18%;
+}
 h1, h2 {
   font-weight: normal;
 }

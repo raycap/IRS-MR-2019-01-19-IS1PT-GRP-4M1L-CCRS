@@ -1,7 +1,9 @@
 <template>
   <div class="getting-started-page">
     <div>Getting Started. Welcome !!</div>
-    <router-link :to="{ name: pageName.questionsPage, params: {page: 1} }">Start</router-link>
+    <router-link class="btn btn-secondary btn-lg active btn-change-page" :to="{ name: pageName.questionsPage, params: {page: 1} }">
+        Start
+    </router-link>
   </div>
 </template>
 
