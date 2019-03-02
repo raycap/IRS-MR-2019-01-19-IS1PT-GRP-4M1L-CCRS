@@ -1,10 +1,10 @@
 <template>
   <div class="recommend-page">
-    <div>You're result is:</div>
-    <div>{{ questionareData }}</div>
+    <!--<div>You're result is:</div>-->
+    <!--<div>{{ questionareData }}</div>-->
 
-    <hr/>
-    <div>Based on your answers, we recommend you:</div>
+    <!--<hr/>-->
+    <div class="recommend-page-title">Based on your answers, we recommend you:</div>
     <div class="recommend-table-wrapper" v-for="(item,i) in resultList" :key="i">
       <div class="recommend-result-item">
         <a class="recommend-result-item-img" target="_blank" :href="item['url']">
@@ -72,6 +72,11 @@ export default {
   width: 65%;
   margin: auto;
 }
+.recommend-page-title{
+  font-weight: bold;
+  margin-bottom: 24px;
+  font-size: x-large;
+}
 .recommend-table-wrapper{
   background: white;
   margin-bottom: 8px;
@@ -94,7 +99,7 @@ export default {
 }
 .btn-change-page{
   max-width: 300px;
-  margin: auto;
+  margin: 16px auto;
 }
 h1, h2 {
   font-weight: normal;
