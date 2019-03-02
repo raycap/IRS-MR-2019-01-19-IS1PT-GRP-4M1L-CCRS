@@ -1,16 +1,17 @@
 <template>
   <div class="questions-page">
+    <div class="questions-page-title">{{ questionsConfigs['pageTitle'] }}</div>
     <div v-for="(question,i) in questionsConfigs['questions']" :key="i" class="questions-box">
       <div class="questions-question">{{ i+1 }}. {{ question[`question`] }}</div>
       <div class="questions-answer form-group">
         <input v-if="question['answerType'] === 'string'" type="text" class="form-control"
-               v-model="question['answer']" placeholder="Answer here..."/>
+               v-model="question['answer']" :placeholder="question['placeholder']"/>
 
         <input v-else-if="question['answerType'] === 'integer'" type="number" class="form-control"
-               v-model="question['answer']" placeholder="Answer here..."/>
+               v-model="question['answer']" :placeholder="question['placeholder']"/>
 
         <input v-else-if="question['answerType'] === 'float'" type="number" class="form-control"
-               v-model="question['answer']" placeholder="Answer here..."/>
+               v-model="question['answer']" :placeholder="question['placeholder']"/>
 
         <div v-else-if="question['answerType'] === 'checkbox'" class="form-check">
           <div v-for="(choice,j) in question['choices']" :key="j">
@@ -75,15 +76,20 @@ export default {
   display: flex;
   flex-direction: column;
 }
+.questions-page-title{
+  font-weight: bold;
+  margin-bottom: 24px;
+  font-size: x-large;
+}
 .questions-box {
   display: flex;
   flex-direction: column;
-  width: 65%;
+  width: 50%;
   margin: auto;
   text-align: left;
   margin-bottom: 32px;
   border: solid 1px darkgrey;
-  padding: 16px;
+  padding: 16px 24px;
   box-shadow: 4px 4px 18px #88889B;
   background-color: white;
 }
@@ -92,7 +98,10 @@ export default {
 }
 .questions-page .btn-submit {
   max-width: 120px;
-  margin-left: 18%;
+  margin-left: 25%;
+}
+.bmd-group-form{
+  padding-top: 8px;
 }
 h1, h2 {
   font-weight: normal;

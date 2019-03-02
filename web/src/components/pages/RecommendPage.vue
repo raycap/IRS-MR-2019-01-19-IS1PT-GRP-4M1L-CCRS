@@ -24,6 +24,7 @@
 
 <script>
 import {pageName} from '../../commons/constants/constants'
+import axios from 'axios'
 
 export default {
   data () {
@@ -47,6 +48,16 @@ export default {
   methods: {},
   mounted () {
     this.questionareData = this.$store.getters.getData
+    axios.post('https://www.google.com/', {body: this.questionareData}).then(
+      response => {
+        console.log('got response : ')
+        console.log(response)
+      }
+    ).catch(e => {
+      console.log('got err : ')
+      console.log(e)
+    }
+    )
     console.log('recommend page')
     console.log(this.questionareData)
   }

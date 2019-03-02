@@ -2,61 +2,80 @@
   "questions":{
     "page_1":{
       "pageName":"p1",
+      "pageTitle": "Personal Information",
       "questions":[
         {
-          "question":"Hello",
-          "questionName":"hello",
-          "answerType": "string"
+          "question":"What is your age ?",
+          "questionName":"age",
+          "placeholder": "Age",
+          "answerType": "integer",
+          "answer": ""
         },
         {
-          "question":"Hello again",
-          "questionName":"hello_2",
-          "answerType": "string"
+          "question":"What is your nationality ?",
+          "questionName":"nationality",
+          "answerType": "radio",
+          "choices": [
+            {"id":"nat_1", "label":"Singaporean/PR", "value": "singaporean"},
+            {"id":"nat_2", "label":"Foreigner", "value": "foreigner"}
+          ]
         }
       ]
     },
     "page_2":{
       "pageName":"p2",
+      "pageTitle":"Revenue and Spending",
       "questions":[
         {
-          "question":"Hello to you",
-          "questionName":"hello",
-          "answerType": "radio",
-          "choices": [
-            {"id":"radio_1", "label":"option 1", "value": "opt_1"},
-            {"id":"radio_2", "label":"option 2", "value": "opt_2"},
-            {"id":"radio_4", "label":"option 4", "value": "opt_4"}
-          ]
+          "question":"How much is your income ?",
+          "questionName":"income",
+          "placeholder": "S$ ...",
+          "answerType": "integer",
+          "answer": ""
         },
         {
-          "question":"Hello to you again",
-          "questionName":"hello_2",
-          "answerType": "checkbox",
-          "choices": [
-            {"id":1, "label":"option 1", "value": "opt_1"},
-            {"id":2, "label":"option 2", "value": "opt_2"},
-            {"id":3, "label":"option 3", "value": "opt_3"},
-            {"id":4, "label":"option 4", "value": "opt_4"}
-          ],
-          "answer":[]
-        }
-      ]
-    },
-    "page_3":{
-      "pageName":"p3",
-      "questions":[
-        {
-          "question":"Hello to me",
-          "questionName":"hello",
-          "answerType": "string"
+          "question":"How much is your average monthly spending ?",
+          "questionName":"total_spending",
+          "placeholder": "S$ ...",
+          "answerType": "integer",
+          "answer": ""
         },
         {
-          "question":"Hello to me again",
-          "questionName":"hello_2",
-          "answerType": "float"
+          "question":"[Breakdown] How much do you spend on dining?",
+          "questionName":"spend_dining",
+          "placeholder": "S$ ...",
+          "answerType": "integer",
+          "answer": ""
+        },
+        {
+          "question":"[Breakdown] How much do you spend on public transport?",
+          "questionName":"spend_public_transport",
+          "placeholder": "S$ ...",
+          "answerType": "integer",
+          "answer": ""
+        },
+        {
+          "question":"[Breakdown] How much do you spend on petrol ?",
+          "questionName":"spend_petrol",
+          "placeholder": "S$ ...",
+          "answerType": "integer",
+          "answer": ""
+        },
+        {
+          "question":"[Breakdown] How much do you spend on taxi/private hire ?",
+          "questionName":"spend_taxi",
+          "placeholder": "S$ ...",
+          "answerType": "integer",
+          "answer": ""
+        },
+        {
+          "question":"[Breakdown] How much do you spend on house bills ?",
+          "questionName":"spend_bills",
+          "placeholder": "S$ ...",
+          "answerType": "integer",
+          "answer": ""
         }
       ]
     }
   }
-
 }
