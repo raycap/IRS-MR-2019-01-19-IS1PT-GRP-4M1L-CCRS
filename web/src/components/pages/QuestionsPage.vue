@@ -14,7 +14,7 @@
 
         <div v-else-if="question['answerType'] === 'checkbox'" class="form-check">
           <div v-for="(choice,j) in question['choices']" :key="j">
-            <input type="checkbox" :id="choice['id']" :value="choice['value']" class="form-check-input"
+            <input type="checkbox" :id="choice['id']" :value="choice['value']"
                    v-model="question['answer']"/>
             <label :for="choice['id']" class="form-check-label"> {{ choice['label'] }} </label>
           </div>
