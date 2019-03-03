@@ -1,7 +1,7 @@
 <template>
   <div class="recommend-page">
     <!--<div>You're result is:</div>-->
-    <!--<div>{{ questionareData }}</div>-->
+    <div>{{ questionareData }}</div>
 
     <!--<hr/>-->
     <div class="recommend-page-title">Based on your answers, we recommend you:</div>
@@ -37,10 +37,56 @@ export default {
       resultList: []
     }
   },
-  methods: {},
+  methods: {
+    getRawField (rawData, field) {
+      for (var key in rawData) {
+        for (var i in rawData[key]['questions']) {
+          if (rawData[key]['questions'][i]['questionName'] === field) {
+            let ans = rawData[key]['questions'][i]['answer']
+            if (rawData[key]['questions'][i]['answerType'] === 'integer') {
+              if (ans === '') {
+                return 0
+              } else {
+                return parseInt(ans)
+              }
+            } else {
+              return ans
+            }
+          }
+        }
+      }
+      return ''
+    },
+    constructRequest (rawData) {
+      return {
+        name: 'John',
+        isSingaporean: this.getRawField(rawData, 'nationality'),
+        age: this.getRawField(rawData, 'age'),
+        income: this.getRawField(rawData, 'income'),
+        spending: this.getRawField(rawData, 'total_spending'),
+        expense_bill: this.getRawField(rawData, 'spend_bills'),
+        expense_phv: this.getRawField(rawData, 'spend_taxi'),
+        expense_petrol: this.getRawField(rawData, 'spend_petrol'),
+        expense_pubtrpt: this.getRawField(rawData, 'spend_public_transport'),
+        expense_dining: this.getRawField(rawData, 'spend_dining')
+      }
+    }
+  },
   mounted () {
-    this.questionareData = this.$store.getters.getData
-    axios.post('localhost:5000', {body: this.questionareData}).then(
+    let rawData = this.$store.getters.getData
+    console.log(this.constructRequest(rawData))
+    axios.post('http://localhost:5000/recommendation', {
+      name: 'John',
+      isSingaporean: this.getRawField(rawData, 'nationality'),
+      age: this.getRawField(rawData, 'age'),
+      income: this.getRawField(rawData, 'income'),
+      spending: this.getRawField(rawData, 'total_spending'),
+      expense_bill: this.getRawField(rawData, 'spend_bills'),
+      expense_phv: this.getRawField(rawData, 'spend_taxi'),
+      expense_petrol: this.getRawField(rawData, 'spend_petrol'),
+      expense_pubtrpt: this.getRawField(rawData, 'spend_public_transport'),
+      expense_dining: this.getRawField(rawData, 'spend_dining')
+    }).then(
       response => {
         console.log('got response : ')
         console.log(response)

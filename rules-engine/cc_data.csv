@@ -1,0 +1,12 @@
+credit_card,bank,min_spend,cbr_dining,cbc_dining,cbr_phv,cbc_phv,cbr_petrol,cbc_petrol,cbr_pubtprt,cbc_pubtprt,cbr_bills,cbc_bills,cbr_general,cbc_general,cbc_total,cbr_min,min_income_citizen,min_income_foreigner
+Citi Cash Back Card,Citibank,888,0.08,25,0.08,25,0.08,25,0.0025,inf,0.0025,inf,0.0025,inf,inf,0.0025,30000,42000
+DBS Live Fresh Card,DBS,600,0.05,20,0.05,20,0,20,0,0,0.05,20,0.3,60,60,0,30000,45000
+HSBC Advance Credit Card,HSBC,2000,0.025,70,0,0,0,0,0,0,0.015,70,0.015,70,70,0.015,30000,40000
+HSBC Visa Platinum Credit Card,HSBC,600,0.05,83.33,0,0,0.05,83.33,0,0,0.05,83.33,0,0,83.33,0,30000,40000
+OCBC 365 Credit Card,OCBC,800,0.06,80,0.03,80,0.05,80,0.03,80,0.03,80,0.003,80,80,0.003,30000,45000
+POSB Everyday Card,POSB,800,0.05,50,0,0,0.06,50,0,0,0.01,1,0.003,50,50,0.003,30000,45000
+Standard Chartered Unlimited Cash Back,SCB,0,0.015,inf,0.02,inf,0.06,inf,0.02,inf,0.015,inf,0.015,inf,inf,0.015,30000,60000
+UOB Yolo Credit Card,UOB,600,0.03,60,0.03,60,0.003,60,0.003,60,0.003,60,0.003,60,60,0.003,30000,40000
+UOB One Card,UOB,500,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,16.67,0,30000,40000
+UOB One Card,UOB,1000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,33.33,0,30000,40000
+UOB One Card,UOB,2000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,100,0,30000,40000
