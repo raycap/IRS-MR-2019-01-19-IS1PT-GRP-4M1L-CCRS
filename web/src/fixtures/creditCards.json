@@ -1,0 +1,71 @@
+{
+  "1":{
+    "name": "Citi Cash Back Card",
+    "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/63/listing_credit-cards_874__2x.png",
+    "url": "http://citibank.com.sg/cashback",
+    "details": [
+      "8% cash back at food & beverage outlets, food & groceries delivery (including Deliveroo, honestbee, RedMart)",
+      "Up to 20.88% savings at Esso and Shell, and 8% cash back at other petrol stations ",
+      "Total min. retail spend of S$888/month, 8% cash back capped at S$25 per category"]
+  },
+  "2":{
+    "name": "DBS Live Fresh",
+    "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/64/listing_credit-cards_876__2x.png",
+    "url": "https://www.dbs.com.sg/personal/cards/credit-cards/live-fresh-dbs-visa-paywave-platinum-card",
+    "details": []
+  },
+  "3":{
+    "name": "HSBC Advance Credit Card",
+    "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/62/listing_Nov2018_JasonLee_HSBC_AdvanceCreditCard_CMYK_R1.png",
+    "url": "www.hsbc.com.sg/advancecard",
+    "details": []
+  },
+  "4":{
+    "name": "HSBC Visa Platinum Credit Card",
+    "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/48/listing_HSBC_VisaPlantinum_CMYK_R1_optimised__1_.png",
+    "url": "www.hsbc.com.sg/visaplatinum",
+    "details": []
+  },
+  "5":{
+    "name": "OCBC 365 Credit Card",
+    "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/59/listing_365_card_HR_new_cropped.png",
+    "url": "https://www.ocbc.com/personal-banking/cards/365card.html",
+    "details": []
+  },
+  "6":{
+    "name": "POSB Everyday Card",
+    "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/67/listing_image_everyday_2x.png",
+    "url": "https://www.posb.com.sg/personal/cards/credit-cards/posb-everyday-card",
+    "details": []
+  },
+  "7":{
+    "name": "Standard Chartered Unlimited Cash Back",
+    "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/79/listing_SCB_UnlimitedMC_ShawnT_Mar8.png",
+    "url": "https://www.sc.com/sg/credit-cards/unlimited-cashback-credit-card/",
+    "details": []
+  },
+  "8":{
+    "name": "UOB Yolo Credit Card",
+    "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/76/listing_U1116046D_F_Optimized.png",
+    "url": "https://www.uob.com.sg/personal/cards/credit/yolo/",
+    "details": []
+  },
+  "9":{
+    "name": "UOB One Card",
+    "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/56/listing_ONEcard_VS_3Dlowres.png",
+    "url": "https://www.uob.com.sg/personal/cards/credit/one/",
+    "details": []
+  },
+  "10":{
+    "name": "UOB One Card",
+    "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/56/listing_ONEcard_VS_3Dlowres.png",
+    "url": "https://www.uob.com.sg/personal/cards/credit/one/",
+    "details": []
+  },
+  "11":{
+    "name": "UOB One Card",
+    "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/56/listing_ONEcard_VS_3Dlowres.png",
+    "url": "https://www.uob.com.sg/personal/cards/credit/one/",
+    "details": []
+  }
+}
