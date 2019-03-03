@@ -1,5 +1,5 @@
 {
-  "1":{
+  "Citi Cash Back Card":{
     "name": "Citi Cash Back Card",
     "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/63/listing_credit-cards_874__2x.png",
     "url": "http://citibank.com.sg/cashback",
@@ -8,15 +8,15 @@
       "0.25% on all other retail spend",
       "Simply spend a minimum of S$888 based on posted transactions per statement month to earn the cashback."]
   },
-  "2":{
-    "name": "DBS Live Fresh",
+  "DBS Live Fresh Card":{
+    "name": "DBS Live Fresh Card",
     "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/64/listing_credit-cards_876__2x.png",
     "url": "https://www.dbs.com.sg/personal/cards/credit-cards/live-fresh-dbs-visa-paywave-platinum-card",
     "details": ["5% Cashback on online & Visa contactless spend",
     "0.3% Cashback on all other spend",
     "Simply spend a minimum of S$600 in a calendar month to receive up to S$60 cashback"]
   },
-  "3":{
+  "HSBC Advance Credit Card":{
     "name": "HSBC Advance Credit Card",
     "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/62/listing_Nov2018_JasonLee_HSBC_AdvanceCreditCard_CMYK_R1.png",
     "url": "www.hsbc.com.sg/advancecard",
@@ -24,7 +24,7 @@
     "1.5% Cashback on all purchases for total eligible purchases below $2000 in a month",
     "No minimum spend required"]
   },
-  "4":{
+  "HSBC Visa Platinum Credit Card":{
     "name": "HSBC Visa Platinum Credit Card",
     "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/48/listing_HSBC_VisaPlantinum_CMYK_R1_optimised__1_.png",
     "url": "www.hsbc.com.sg/visaplatinum",
@@ -32,7 +32,7 @@
     "S$250 Cashback Cap per quarter",
     "Simply spend a minimum of S$ 600 per month per quarter"]
   },
-  "5":{
+  "OCBC 365 Credit Card":{
     "name": "OCBC 365 Credit Card",
     "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/59/listing_365_card_HR_new_cropped.png",
     "url": "https://www.ocbc.com/personal-banking/cards/365card.html",
@@ -40,7 +40,7 @@
     "S$80 Cashback Cap per month",
     "Simply spend a minimum of S$800 per month"]
   },
-  "6":{
+  "POSB Everyday Card":{
     "name": "POSB Everyday Card",
     "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/67/listing_image_everyday_2x.png",
     "url": "https://www.posb.com.sg/personal/cards/credit-cards/posb-everyday-card",
@@ -48,7 +48,7 @@
     "S$50 Cashback Cap for Sheng Siong",
     "Up to 15% cash rebates on dining with a min spend of S$800"]
   },
-  "7":{
+  "Standard Chartered Unlimited Cash Back":{
     "name": "Standard Chartered Unlimited Cash Back",
     "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/79/listing_SCB_UnlimitedMC_ShawnT_Mar8.png",
     "url": "https://www.sc.com/sg/credit-cards/unlimited-cashback-credit-card/",
@@ -56,7 +56,7 @@
     "Unlimited Cashback Cap",
     "No minimum spend per month"]
   },
-  "8":{
+  "UOB Yolo Credit Card":{
     "name": "UOB Yolo Credit Card",
     "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/76/listing_U1116046D_F_Optimized.png",
     "url": "https://www.uob.com.sg/personal/cards/credit/yolo/",
@@ -64,28 +64,12 @@
     "Up to S$80 Cash Back Cap per mon",
     "Simply spend a minimum of S$600 per month"]
   },
-  "9":{
+  "UOB One Card":{
     "name": "UOB One Card",
     "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/56/listing_ONEcard_VS_3Dlowres.png",
     "url": "https://www.uob.com.sg/personal/cards/credit/one/",
     "details": ["Up to 5% cash rebate on all spend for spend above S$2,000/month per quarter",
     "S$300 Cashback Cap per quarter",
     "Simply spend a minimum of S$500 per month"]
-  },
-  "10":{
-    "name": "UOB One Card",
-    "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/56/listing_ONEcard_VS_3Dlowres.png",
-    "url": "https://www.uob.com.sg/personal/cards/credit/one/",
-    "details": ["Up to 5% cash rebate on all spend for spend above S$2,000/month per quarter",
-      "S$300 Cashback Cap per quarter",
-      "Simply spend a minimum of S$500 per month"]
-  },
-  "11":{
-    "name": "UOB One Card",
-    "image": "https://photos.cdn-moneysmart.com/uploads/ms_core/product/image/56/listing_ONEcard_VS_3Dlowres.png",
-    "url": "https://www.uob.com.sg/personal/cards/credit/one/",
-    "details": ["Up to 5% cash rebate on all spend for spend above S$2,000/month per quarter",
-      "S$300 Cashback Cap per quarter",
-      "Simply spend a minimum of S$500 per month"]
   }
 }

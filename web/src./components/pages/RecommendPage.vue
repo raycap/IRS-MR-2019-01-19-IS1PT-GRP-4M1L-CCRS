@@ -1,20 +1,25 @@
 <template>
   <div class="recommend-page">
-    <!--<div>You're result is:</div>-->
-    <div>{{ questionareData }}</div>
-
-    <!--<hr/>-->
-    <div class="recommend-page-title">Based on your answers, we recommend you:</div>
-    <div class="recommend-table-wrapper" v-for="(item,i) in resultList" :key="i">
-      <div class="recommend-result-item">
-        <a class="recommend-result-item-img" target="_blank" :href="item['url']">
-          <img :src="item['image']"/>
-        </a>
-        <div class="recommend-result-item-desc">
-          <a class="recommend-result-item-name" target="_blank" :href="item['url']">{{ item['name'] }}</a>
-          <ul id="ul-item">
-            <li v-for="(it,j) in item['details']" :key="j">{{ it }}</li>
-          </ul>
+    <div class="recommend-page-title" v-show="eligible === 'N' || eligible === 'n'">
+      Looks like you are not eligible for any credit cards. Please try again in the future :)
+    </div>
+    <div class="recommend-page-title" v-show="eligible === ''">
+      Oops something went wrong.<br>
+      We cannot reach out to our server :(
+    </div>
+    <div v-show="eligible === 'Y' || eligible === 'y'">
+      <div class="recommend-page-title">Based on your answers, we recommend you:</div>
+      <div class="recommend-table-wrapper" v-for="(item,i) in resultList" :key="i">
+        <div class="recommend-result-item">
+          <a class="recommend-result-item-img" target="_blank" :href="item['url']">
+            <img :src="item['image']"/>
+          </a>
+          <div class="recommend-result-item-desc">
+            <a class="recommend-result-item-name" target="_blank" :href="item['url']">{{ item['name'] }}</a>
+            <ul id="ul-item">
+              <li v-for="(it,j) in item['details']" :key="j">{{ it }}</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -34,7 +39,8 @@ export default {
     return {
       pageName: pageName,
       questionareData: {},
-      resultList: []
+      resultList: [],
+      eligible: 'y'
     }
   },
   methods: {
@@ -89,15 +95,18 @@ export default {
     }).then(
       response => {
         console.log('got response : ')
-        console.log(response)
+        console.log(response.data)
+        this.eligible = 'n'
+        if (this.eligible === 'Y' || this.eligible === 'y') {
+          // TODO : display cashback amount
+          this.resultList.push(creditCardsInfo[response.data['Cardname']])
+        }
       }
     ).catch(e => {
       console.log('got err : ')
       console.log(e)
-    }
-    )
-    // TODO: fix this
-    this.resultList.push(creditCardsInfo['1'])
+      this.eligible = ''
+    })
   }
 }
 </script>
@@ -122,6 +131,7 @@ export default {
 }
 .recommend-result-item{
   display: flex;
+  padding-top: 16px;
   flex-direction: row;
   margin: 16px 24px;
 }
