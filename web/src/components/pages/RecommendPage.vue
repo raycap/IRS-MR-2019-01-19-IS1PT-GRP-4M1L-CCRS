@@ -16,6 +16,7 @@
           </a>
           <div class="recommend-result-item-desc">
             <a class="recommend-result-item-name" target="_blank" :href="item['url']">{{ item['name'] }}</a>
+            <div v-show="cashbackList[i] > 0" class="recommend-result-item-name">You can get cashback up to: S${{ cashbackList[i] }}</div>
             <ul id="ul-item">
               <li v-for="(it,j) in item['details']" :key="j">{{ it }}</li>
             </ul>
@@ -40,6 +41,7 @@ export default {
       pageName: pageName,
       questionareData: {},
       resultList: [],
+      cashbackList: [],
       eligible: 'y'
     }
   },
@@ -98,7 +100,7 @@ export default {
         console.log(response.data)
         this.eligible = 'n'
         if (this.eligible === 'Y' || this.eligible === 'y') {
-          // TODO : display cashback amount
+          this.cashbackList.push(parseInt(response.data['CashbackAmount']))
           this.resultList.push(creditCardsInfo[response.data['Cardname']])
         }
       }
