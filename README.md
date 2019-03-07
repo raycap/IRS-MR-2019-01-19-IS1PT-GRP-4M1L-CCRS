@@ -12,4 +12,6 @@ redis-server "C:\Program Files\Redis\redis.windows.conf" <- change this
 # run start.bat to start all application
 start.bat
 
+# access localhost:8000/home
+
 ```

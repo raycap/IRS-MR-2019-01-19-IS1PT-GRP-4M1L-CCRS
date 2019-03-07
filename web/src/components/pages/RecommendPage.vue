@@ -38,6 +38,7 @@ import creditCardsInfo from '../../fixtures/creditCards'
 export default {
   data () {
     return {
+      queryid: 1,
       pageName: pageName,
       questionareData: {},
       resultList: [],
@@ -78,6 +79,21 @@ export default {
         expense_pubtrpt: this.getRawField(rawData, 'spend_public_transport'),
         expense_dining: this.getRawField(rawData, 'spend_dining')
       }
+    },
+    getResult () {
+      axios.get('http://localhost:5000/search/' + this.queryid).then(
+        response => {
+          console.log('search/ got response : ')
+          console.log(response)
+          this.eligible = response.data['Eligible']
+          if (this.eligible === 'Y' || this.eligible === 'y') {
+            this.cashbackList.push(parseInt(response.data['CashbackAmount']))
+            this.resultList.push(creditCardsInfo[response.data['Cardname']])
+          }
+        }).catch(e => {
+        console.log('search/ got err : ')
+        console.log(e)
+      })
     }
   },
   mounted () {
@@ -85,7 +101,7 @@ export default {
     console.log(this.constructRequest(rawData))
     axios.post('http://localhost:5000/recommendation', {
       name: 'John',
-      isSingaporean: this.getRawField(rawData, 'nationality'),
+      isCitizen: this.getRawField(rawData, 'nationality'),
       age: this.getRawField(rawData, 'age'),
       income: this.getRawField(rawData, 'income'),
       spending: this.getRawField(rawData, 'total_spending'),
@@ -93,16 +109,15 @@ export default {
       expense_phv: this.getRawField(rawData, 'spend_taxi'),
       expense_petrol: this.getRawField(rawData, 'spend_petrol'),
       expense_pubtrpt: this.getRawField(rawData, 'spend_public_transport'),
-      expense_dining: this.getRawField(rawData, 'spend_dining')
+      expense_dining: this.getRawField(rawData, 'spend_dining'),
+      queryid: this.queryid
     }).then(
       response => {
         console.log('got response : ')
         console.log(response.data)
-        this.eligible = 'n'
-        if (this.eligible === 'Y' || this.eligible === 'y') {
-          this.cashbackList.push(parseInt(response.data['CashbackAmount']))
-          this.resultList.push(creditCardsInfo[response.data['Cardname']])
-        }
+        setTimeout(() => {
+          this.getResult()
+        }, 2000)
       }
     ).catch(e => {
       console.log('got err : ')

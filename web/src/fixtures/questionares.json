@@ -16,10 +16,10 @@
           "questionName":"nationality",
           "answerType": "radio",
           "choices": [
-            {"id":"nat_1", "label":"Singaporean/PR", "value": "y"},
-            {"id":"nat_2", "label":"Foreigner", "value": "n"}
+            {"id":"nat_1", "label":"Singaporean/PR", "value": "Y"},
+            {"id":"nat_2", "label":"Foreigner", "value": "N"}
           ],
-          "answer": "y"
+          "answer": "Y"
         }
       ]
     },
