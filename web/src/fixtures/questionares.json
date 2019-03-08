@@ -28,7 +28,7 @@
       "pageTitle":"Revenue and Spending",
       "questions":[
         {
-          "question":"How much is your income ?",
+          "question":"How much is your annual income ?",
           "questionName":"income",
           "placeholder": "S$ ...",
           "answerType": "integer",
@@ -42,37 +42,37 @@
           "answer": ""
         },
         {
-          "question":"[Breakdown] How much do you spend on dining?",
+          "question":"[Breakdown] How much do you spend on dining? (Please answer in % of monthly spending you have)",
           "questionName":"spend_dining",
-          "placeholder": "S$ ...",
+          "placeholder": "%",
           "answerType": "integer",
           "answer": ""
         },
         {
-          "question":"[Breakdown] How much do you spend on public transport?",
+          "question":"[Breakdown] How much do you spend on public transport? (Please answer in % of monthly spending you have)",
           "questionName":"spend_public_transport",
-          "placeholder": "S$ ...",
+          "placeholder": "%",
           "answerType": "integer",
           "answer": ""
         },
         {
-          "question":"[Breakdown] How much do you spend on petrol ?",
+          "question":"[Breakdown] How much do you spend on petrol ? (Please answer in % of monthly spending you have)",
           "questionName":"spend_petrol",
-          "placeholder": "S$ ...",
+          "placeholder": "%",
           "answerType": "integer",
           "answer": ""
         },
         {
-          "question":"[Breakdown] How much do you spend on taxi/private hire ?",
+          "question":"[Breakdown] How much do you spend on taxi/private hire ? (Please answer in % of monthly spending you have)",
           "questionName":"spend_taxi",
-          "placeholder": "S$ ...",
+          "placeholder": "%",
           "answerType": "integer",
           "answer": ""
         },
         {
-          "question":"[Breakdown] How much do you spend on house bills ?",
+          "question":"[Breakdown] How much do you spend on house bills ? (Please answer in % of monthly spending you have)",
           "questionName":"spend_bills",
-          "placeholder": "S$ ...",
+          "placeholder": "%",
           "answerType": "integer",
           "answer": ""
         }
