@@ -53,7 +53,7 @@ with ruleset('recommendation'):
         exp = c.m.spending 
         
         
-        with open (".\cc_data.csv") as file:
+        with open ("cc_data.csv") as file:
             reader = csv.DictReader(file)
     
             for row in reader:
@@ -120,7 +120,7 @@ with ruleset('recommendation'):
 
                     elif (exp >= 2000) :
 
-                        dict_cashback[cc.get('credit_card')] = 1000
+                        dict_cashback[cc.get('credit_card')] = 100
             else: 
                 continue
         

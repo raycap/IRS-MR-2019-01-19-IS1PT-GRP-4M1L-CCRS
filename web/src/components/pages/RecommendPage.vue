@@ -117,7 +117,7 @@ export default {
         console.log(response.data)
         setTimeout(() => {
           this.getResult()
-        }, 2000)
+        }, 2500)
       }
     ).catch(e => {
       console.log('got err : ')
