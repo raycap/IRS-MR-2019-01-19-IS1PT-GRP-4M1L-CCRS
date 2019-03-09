@@ -1,2 +1,3 @@
 @echo off
-redis-server "C:\Program Files\Redis\redis.windows.conf"
+cd Redis/
+redis-server "./redis.windows.conf"

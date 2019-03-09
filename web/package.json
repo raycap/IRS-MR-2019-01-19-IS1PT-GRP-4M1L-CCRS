@@ -5,7 +5,7 @@
   "author": "Raymond Djajalaksana <ray-cap@hotmail.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --host 0.0.0.0 --port 8000 --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --host 0.0.0.0 --port 8080 --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run e2e",
