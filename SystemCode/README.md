@@ -10,22 +10,26 @@ Installation:
 - Microsoft Visual C++ 14.0: [Build Tools for Visual Studio 2017](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15 "Build Tools for Visual Studio 2017")  
 
 ``` bash
-# install all front end dependencies
+# 1. install all front end dependencies
 cd web/
 npm install
 
-# install all backend dependencies
+# 2. install all backend dependencies
 pip install requests flask flask_cors durable_rules
 
-# run start.bat to start all application (Windows only)
-start.bat
+# 3. (Windows only) run start.bat to start all application 
+./start.bat
+# 3. (Non windows) you need to run redis server manually, and then run the rules engine by running cc_system.py inside rules-engine folder 
+python cc_system.py
 
-# try access localhost:8080/home
 
-# alternatively you just need to run rules engine by running python script and redis (Windows only)
+# 4. Try access localhost:8080/home 
+
+
+# Alternatively you just need to run rules engine by running python script and redis
 start_server.bat
-
-# and access the frontend from AWS host
+# And then access the frontend from AWS host. This static host will connect to your localhost rules engine backend
 http://machine-reasoning.s3-website-ap-southeast-1.amazonaws.com/home
+
 
 ```
