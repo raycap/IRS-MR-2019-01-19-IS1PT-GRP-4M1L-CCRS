@@ -1,6 +1,7 @@
 ﻿### Worksop Project Submission Template: Github Repository & Zip File
 
 **[Naming Convention]** CourseCode-StartDate-BatchCode-Group_or_Individual-TeamName_or_PersonName-ProjectName.zip
+=======
 
 * **[MTech Group Project Naming Example]** IRS-MR-2019-01-19-IS1PT-GRP-AwsomeSG-HDB_BTO_Recommender.zip
 
@@ -59,7 +60,16 @@ More reference video presentations [here](https://telescopeuser.wordpress.com/20
 ---
 ## SECTION 5 : USER GUIDE
 
+Requirements
+** nodejs and npm should be installed. Otherwise please download and install from the following website: https://www.npmjs.com/get-npm
+
+``` bash
+# install all front end dependencies
+cd web/
+npm install
+
 `<Github File Link>` : <https://github.com/telescopeuser/Workshop-Project-Submission-Template/blob/master/UserGuide/User%20Guide%20HDB-BTO.pdf>
+
 
 ### [ 1 ] To run the system using iss-vm
 
