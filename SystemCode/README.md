@@ -6,7 +6,7 @@ cd web/
 npm install
 
 # install all backend dependencies
-pip install requests, flask, flask_cors, durable_rules
+pip install requests flask flask_cors durable_rules
 
 # locate the path of redis config and change set it in start_redis.bat
 start_redis.bat :
