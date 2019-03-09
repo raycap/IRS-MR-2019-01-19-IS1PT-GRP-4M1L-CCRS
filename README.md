@@ -51,6 +51,7 @@ TODO:
 
 Requirements
 * nodejs and npm should be installed. Otherwise please download and install from the following website: https://www.npmjs.com/get-npm
+* Python 2.7 ~ Python 3.6.5 should be installed. Otherwise, please download and install from the following website: https://www.python.org/downloads/ 
 
 ``` bash
 # install all front end dependencies
