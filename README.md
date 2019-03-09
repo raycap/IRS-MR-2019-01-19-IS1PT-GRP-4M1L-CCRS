@@ -5,14 +5,6 @@
 
 * **[MTech Group Project Naming Example]** IRS-MR-2019-01-19-IS1PT-GRP-AwsomeSG-HDB_BTO_Recommender.zip
 
-* **[MTech Individual Project Naming Example]** IRS-MR-2019-07-01-IS1FT-IND-SamGuZhan-HDB_BTO_Process.zip
-
-* **[EEP Group Project Naming Example]** IRS-MR-2019-03-13-EEP-GRP-AwsomeSG-HDB_BTO_Recommender.zip
-
-* **[EEP Individual Project Naming Example]** IRS-MR-2019-08-22-EEP-IND-SamGuZhan-HDB_BTO_Process.zip
-
-[Online editor for this README.md markdown file](https://pandao.github.io/editor.md/en.html "pandao")
-
 ---
 
 ### <<<<<<<<<<<<<<<<<<<< Start of Template >>>>>>>>>>>>>>>>>>>>
@@ -20,23 +12,22 @@
 ---
 
 ## SECTION 1 : PROJECT TITLE
-## Singapore Housing & Deveoplment Board - BTO Recommender System
+## 4M1L - Credit Card Recommendation System
 
 <img src="SystemCode/clips/static/hdb-bto.png"
      style="float: left; margin-right: 0px;" />
 
 ---
 ## SECTION 2 : EXECUTIVE SUMMARY / PAPER ABSTRACT
-Singapore ranks amongst countries with the highest population density in the world. In a bid to have firm control over long term urban planning, the Singapore government came up with the “Built to Order” (abbreviated BTO) initiative back in 2001. These are new Housing Development Board (HDB) flats tightly controlled by their eligibility and quantity released every year. In more recent years, the modern BTO scheme in Singapore requires a waiting period of 3-4 years, and is generally targeted at young Singaporean couples looking to purchase their first property and set up a family. Nationality and income ceilings are some of the broad filters that determine one’s eligibility for the highly sought after projects. 
+A vibrant city located in the heart of Asia, Singapore offers global investors unparalleled access to global markets. Strategically located to serve Asia Pacific, one of the world’s fastest-growing regions, Singapore’s well-established business infrastructure, global connectivity and trade linkages enable investors to access the approximately 4 billion strong Asian market within a radius of 7 hours’ flight time. (MAS, 2017)
 
+In Singapore, one of the first things people do after getting their first job is to apply for a credit card. It makes perfect sense that paying with a credit card allows them to enjoy many benefits that using cash wouldn’t provide. With the advancement of technology, the people nowadays could even embed the credit card with their phone with the various mobile payment introduced such as Apple Pay, Samsung Pay, Google Pay and etc.
+In the past, carrying credit cards were considered one of the elusive “5Cs” (Cash, Car, Credit card, Condominium and Country club membership) that people in Singapore worked hard to attain. Today, owning a credit card is not only the norm, but the financially-savvy option. 
+  
+However, picking a credit card can be a very frustrating process and most of the people have went through a hard time in finding the best credit card. By trying to optimize the reward from credit card, they might have fallen into the pitfall of applying excessive credit card, resulting in burdened themselves with unnecessary late payment charge or principal annual fee. Overall, no single credit card is better than all others in all categories, but by asking the right questions, each person can find the card that best fit his spending habit and credit situation. 
 
-Our team, comprising of 6 young Singaporeans, all hope to be property owners one day. Many of our peers opt for BTO flats due to their affordability, existence of financial aid from the government, as well as their resale value. However, there often exists a knowledge gap for these young couples during the decision making process and they end up making potentially regretful decisions. We would like to bridge this knowledge gap, and have hence chosen to base our project on creating a recommender system for BTO flats, utilizing the data from recent launches in Tampines, Eunos, Sengkang and Punggol. 
+Our team, comprising of 5 members from different nationalities, looking forward to achieve financial freedom in one day. As the first step toward the financial freedom, we have came out with a credit card recommendation system, with the aim to help all the first time credit card applicants  in optimizing the credit card selection and better their financial management.
 
-
-Using the techniques imparted to us in lectures, our group first set out to build a sizeable knowledge base via conducting an interview and administering a survey. While building the system, we utilized tools such as Java to scrape real time data from HDB website and transform it into a database, CLIPS to synthesize the rule based reasoning process, and Python to integrate it into an easy to use UI for the everyday user. To add icing on the cake, we even hosted the system on a website so that the everyday user can access it through the click of a link.
-
-
-Our team had an amazing time working on this project, and hope to share our insights with everyone. Despite a focus on BTO flats, we would recommend it for everybody interested in understanding property market trends for residence or investment purposes. There truly are a wide array of factors behind the decision to invest in a property, and we only wish there was more time to work on the scope and scale of the project. 
 
 ---
 ## SECTION 3 : CREDITS / PROJECT CONTRIBUTION
@@ -52,21 +43,33 @@ Our team had an amazing time working on this project, and hope to share our insi
 ---
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
+TODO:
 [![Sudoku AI Solver](http://img.youtube.com/vi/-AiYLUjP6o8/0.jpg)](https://youtu.be/-AiYLUjP6o8 "Sudoku AI Solver")
-
-Note: It is not mandatory for every project member to appear in video presentation; Presentation by one project member is acceptable. 
-More reference video presentations [here](https://telescopeuser.wordpress.com/2018/03/31/master-of-technology-solution-know-how-video-index-2/ "video presentations")
 
 ---
 ## SECTION 5 : USER GUIDE
 
 Requirements
-** nodejs and npm should be installed. Otherwise please download and install from the following website: https://www.npmjs.com/get-npm
+* nodejs and npm should be installed. Otherwise please download and install from the following website: https://www.npmjs.com/get-npm
 
 ``` bash
 # install all front end dependencies
 cd web/
 npm install
+
+# install all backend dependencies
+pip install requests, flask, flask_cors, durable_rules
+
+# locate the path of redis config and change set it in start_redis.bat
+start_redis.bat :
+redis-server "C:\Program Files\Redis\redis.windows.conf" <- change this
+
+# run start.bat to start all application
+start.bat
+
+# access localhost:8000/home
+
+```
 
 `<Github File Link>` : <https://github.com/telescopeuser/Workshop-Project-Submission-Template/blob/master/UserGuide/User%20Guide%20HDB-BTO.pdf>
 
