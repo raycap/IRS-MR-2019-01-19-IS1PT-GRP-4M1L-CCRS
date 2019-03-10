@@ -1,20 +1,7 @@
-﻿### Worksop Project Submission Template: Github Repository & Zip File
-
-**[Naming Convention]** CourseCode-StartDate-BatchCode-Group_or_Individual-TeamName_or_PersonName-ProjectName.zip
-=======
-
-* **[MTech Group Project Naming Example]** IRS-MR-2019-01-19-IS1PT-GRP-AwsomeSG-HDB_BTO_Recommender.zip
-
----
-
-### <<<<<<<<<<<<<<<<<<<< Start of Template >>>>>>>>>>>>>>>>>>>>
-
----
-
-## SECTION 1 : PROJECT TITLE
+﻿## SECTION 1 : PROJECT TITLE
 ## 4M1L - Credit Card Recommendation System
 
-<img src="SystemCode/clips/static/hdb-bto.png"
+<img src=”home.png"
      style="float: left; margin-right: 0px;" />
 
 ---
@@ -31,102 +18,80 @@ Our team, comprising of 5 members from different nationalities, looking forward 
 
 ---
 ## SECTION 3 : CREDITS / PROJECT CONTRIBUTION
-
+TODO:
 | Official Full Name  | Student ID (MTech Applicable)  | Work Items (Who Did What) | Email (Optional) |
 | :------------ |:---------------:| :-----| :-----|
-| Desmond Chua | A1234567A | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567A@nus.edu.sg |
-| Chang Ye Han | A1234567B | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567B@gmail.com |
-| Chee Jia Wei | A1234567C | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567C@outlook.com |
-| Ganesh Kumar | A1234567D | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567D@yahoo.com |
-| Jeanette Lim | A1234567E | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567E@qq.com |
+| Chen Liwei | A0101217B | Video Editing Data Collection Knowledge Modelling| e0384319@u.nus.edu |
+| Lee Boon Kien | A0195175W | Video Presentation Data Collection Knowledge Modelling| e0384806@u.nus.edu |
+| Ng Cheong Hong| A0195290Y| Knowledge Modelling Rules Engine Programming | e0384921@u.nus.edu |
+| Raymond Djajalaksana| A0195381X | Report Writing Front End Programming | e0385012@u.nus.edu |
+| Seah Jun Ru| A0097451Y | Data Collection Report Writing Knowledge Modelling| … @yahoo.com |
 
 ---
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
-TODO:
-[![Sudoku AI Solver](http://img.youtube.com/vi/-AiYLUjP6o8/0.jpg)](https://youtu.be/-AiYLUjP6o8 "Sudoku AI Solver")
+[![Credit Card Recommendation System](https://youtu.be/kF0tPmweUeU/0.jpg)](https://youtu.be/kF0tPmweUeU "Credit Card Recommendation System")
 
 ---
 ## SECTION 5 : USER GUIDE
 
-Requirements
+Requirements:
 * nodejs and npm should be installed. Otherwise please download and install from the following website: https://www.npmjs.com/get-npm
 * Python 2.7 ~ Python 3.6.5 should be installed. Otherwise, please download and install from the following website: https://www.python.org/downloads/ 
+[*It is recommended to use the python version mentioned above since durable_rules might not be working properly for other python version]
+
+Installation:
+- [Anaconda](https://repo.anaconda.com/archive/Anaconda3-2018.12-Windows-x86_64.exe "Anaconda") / [Python 3.6](https://www.python.org/downloads/release/python-365/ "Python 3.6") or older
+- [Node.js ](https://nodejs.org/en/ "Node.js ")
+- Microsoft Visual C++ 14.0: [Build Tools for Visual Studio 2017](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15 "Build Tools for Visual Studio 2017")  
 
 ``` bash
-# install all front end dependencies
+# 1. install all front end dependencies
 cd web/
 npm install
 
-# install all backend dependencies
-pip install requests, flask, flask_cors, durable_rules
+# 2. install all backend dependencies
+pip install requests flask flask_cors durable_rules
 
-# locate the path of redis config and change set it in start_redis.bat
-start_redis.bat :
-redis-server "C:\Program Files\Redis\redis.windows.conf" <- change this
+# 3. (Windows only) run start.bat to start all application 
+./start.bat
+# 3. (Non windows) you need to run redis server manually, and then run the rules engine by running cc_system.py inside rules-engine folder 
+python cc_system.py
 
-# run start.bat to start all application
-start.bat
 
-# access localhost:8000/home
+# 4. Try access localhost:8080/home 
+
+
+# Alternatively you just need to run rules engine by running python script and redis
+start_server.bat
+# And then access the frontend from AWS host. This static host will connect to your localhost rules engine backend
+http://machine-reasoning.s3-website-ap-southeast-1.amazonaws.com/home
 
 ```
 
-`<Github File Link>` : <https://github.com/telescopeuser/Workshop-Project-Submission-Template/blob/master/UserGuide/User%20Guide%20HDB-BTO.pdf>
-
-
-### [ 1 ] To run the system using iss-vm
-
-> download pre-built virtual machine from http://bit.ly/iss-vm
-
-> start iss-vm
-
-> open terminal in iss-vm
-
-> $ git clone https://github.com/telescopeuser/Workshop-Project-Submission-Template.git
-
-> $ source activate iss-env-py2
-
-> (iss-env-py2) $ cd Workshop-Project-Submission-Template/SystemCode/clips
-
-> (iss-env-py2) $ python app.py
-
-> **Go to URL using web browser** http://0.0.0.0:5000 or http://127.0.0.1:5000
-
-### [ 2 ] To run the system in other/local machine:
-### Install additional necessary libraries. This application works in python 2 only.
-
-> $ sudo apt-get install python-clips clips build-essential libssl-dev libffi-dev python-dev python-pip
-
-> $ pip install pyclips flask flask-socketio eventlet simplejson pandas
+User Guide
+`<Github File Link>` : <https://github.com/raycap/IRS-MR-2019-01-19-IS1PT-GRP-4M1L-CCRS/blob/master/UserGuide/4M1L_User_Guide_CCRS.pdf>
 
 ---
 ## SECTION 6 : PROJECT REPORT / PAPER
-
-`<Github File Link>` : <https://github.com/telescopeuser/Workshop-Project-Submission-Template/blob/master/ProjectReport/Project%20Report%20HDB-BTO.pdf>
-
-**Recommended Sections for Project Report / Paper:**
-- Executive Summary / Paper Abstract
-- Sponsor Company Introduction (if applicable)
-- Business Problem Background
-- Project Objectives & Success Measurements
-- Project Solution (To detail domain modelling & system design.)
-- Project Implementation (To detail system development & testing approach.)
-- Project Performance & Validation (To prove project objectives are met.)
-- Project Conclusions: Findings & Recommendation
-- List of Abbreviations (if applicable)
-- References (if applicable)
+`<Github File Link>` : <https://github.com/raycap/IRS-MR-2019-01-19-IS1PT-GRP-4M1L-CCRS/blob/master/ProjectReport/4M1L_CreditCardRecommendationReport.pdf>
 
 ---
 ## SECTION 7 : MISCELLANEOUS
 
-### HDB_BTO_SURVEY.xlsx
+### [Credit card selection survey-2.csv](https://github.com/raycap/IRS-MR-2019-01-19-IS1PT-GRP-4M1L-CCRS/blob/master/Miscellaneous/Credit%20card%20selection%20survey-2.csv)
 * Results of survey
 * Insights derived, which were subsequently used in our system
+### 
+
+### [Credit Card Database.csv](https://github.com/raycap/IRS-MR-2019-01-19-IS1PT-GRP-4M1L-CCRS/blob/master/Miscellaneous/Credit%20Card%20Database.xlsx)
+* Selection criterias for credit cards, which were collated from various banks.
+* Served as the basis to calculate for the eligible cashflow amount
+### 
 
 ---
 
-### <<<<<<<<<<<<<<<<<<<< End of Template >>>>>>>>>>>>>>>>>>>>
+
 
 ---
 
