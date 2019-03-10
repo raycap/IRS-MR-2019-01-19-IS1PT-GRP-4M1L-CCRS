@@ -1,7 +1,8 @@
 ﻿## SECTION 1 : PROJECT TITLE
 ## 4M1L - Credit Card Recommendation System
 
-(https://github.com/raycap/IRS-MR-2019-01-19-IS1PT-GRP-4M1L-CCRS/blob/master/home.png "Credit Card Recommendation System")**
+<img src="Miscellaneous/home.png"
+     style="float: left; margin-right: 0px;" />
 
 ---
 ## SECTION 2 : EXECUTIVE SUMMARY / PAPER ABSTRACT
