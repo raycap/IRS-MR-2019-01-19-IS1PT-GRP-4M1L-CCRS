@@ -25,7 +25,7 @@ TODO:
 | Lee Boon Kien | A0195175W | Video Presentation Data Collection Knowledge Modelling| e0384806@u.nus.edu |
 | Ng Cheong Hong| A0195290Y| Knowledge Modelling Rules Engine Programming | e0384921@u.nus.edu |
 | Raymond Djajalaksana| A0195381X | Report Writing Front End Programming | e0385012@u.nus.edu |
-| Seah Jun Ru| A0097451Y | Data Collection Report Writing Knowledge Modelling| … @yahoo.com |
+| Seah Jun Ru| A0097451Y | Data Collection Report Writing Knowledge Modelling| e0258166@u.nus.edu |
 
 ---
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
