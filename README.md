@@ -18,7 +18,7 @@ Our team, comprising of 5 members from different nationalities, looking forward 
 
 ---
 ## SECTION 3 : CREDITS / PROJECT CONTRIBUTION
-TODO:
+
 | Official Full Name  | Student ID (MTech Applicable)  | Work Items (Who Did What) | Email (Optional) |
 | :------------ |:---------------:| :-----| :-----|
 | Chen Liwei | A0101217B | Video Editing Data Collection Knowledge Modelling| e0384319@u.nus.edu |
@@ -30,7 +30,7 @@ TODO:
 ---
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
-[![Credit Card Recommendation System](https://youtu.be/kF0tPmweUeU/0.jpg)](https://youtu.be/kF0tPmweUeU "Credit Card Recommendation System")
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kF0tPmweUeU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 ## SECTION 5 : USER GUIDE
